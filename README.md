@@ -1,4 +1,4 @@
-# docker_nextclod
+# docker_nextcloud
 
 these days i am working on docker (containerization tool)
 and i came across the idea of launching a cloud server used to share and collaborate on documents, send and receive email, manage calendar and have video chats.
