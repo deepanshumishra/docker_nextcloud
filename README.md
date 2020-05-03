@@ -24,36 +24,7 @@ i am using redhat8 as the host but you can use any linux distro
  make a directory in "/"
  `mkdir MyCompose`
  `cd MyCompose`
- `vim docker-compose.yml`
-
-version: '2'
-
-volumes:
-  nextcloud:
-  db:
-
-services:
-  db:
-    image: mariadb
-    restart: always
-    volumes:
-            - db:/var/lib/mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=rootpass
-      - MYSQL_PASSWORD=redhat
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=deepanshu
-
-  app:
-    image: nextcloud
-    ports:
-      - 8080:80
-    links:
-      - db
-    volumes:
-      - nextcloud:/var/www/html
-    restart: always
-
+ and now paste the above file into this directory
 
 after saving above file just type `docker-compose up -d`
 to run the whole setup in one go
